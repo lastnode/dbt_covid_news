@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: covid_news
+    columns:
+      - name: date
+        tests:
+          - unique
+          - not_null
+      - name: term_covid_count
+        tests:
+          - not_null
+      - name: term_corona_count
+        tests:
+          - not_null
+
+  - name: covid_cases
+    columns:
+      - name: date
+        tests:
+          - unique
+          - not_null
+      - name: confirmed_count
+        tests:
+          - not_null
+      - name: recovered_count
+        tests:
+          - not_null
+      - name: death_count
+        tests:
+          - not_null
